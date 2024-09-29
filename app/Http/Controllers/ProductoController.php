@@ -14,7 +14,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        return view('index');
     }
 
     /**
@@ -24,7 +24,7 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -57,7 +57,10 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        Log::info('Editar');
+        return response()->json([
+            'message' => 'No hay vista para editar',
+        ]);
     }
 
     /**
